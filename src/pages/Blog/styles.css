@@ -1,0 +1,54 @@
+.blog-wrap{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px; /* Added padding for better appearance on smaller screens */
+}
+
+.blog-goBack{
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #a9a9a9;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.blog-wrap header{
+    text-align: center;
+}
+
+.blog-date{
+    font-size: .8rem;
+    color: #a9a9a9;
+    font-weight: 500;
+}
+
+.blog-wrap img{
+    width: 100%;
+    border-radius: 10px; /* Added rounding for better aesthetics */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Added shadow for better distinction */
+}
+
+.blog-subCategory{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens*/
+    gap: 1rem; /*Added spacing between items */
+    margin-top: 1rem;
+}
+
+.blog-subCategory > div{
+    margin: 0.5rem;
+    text-align: center; /* Centered text for better alignment */
+}
+
+.blog-desc{
+    padding: 1rem;
+    margin-top: 1.5rem;
+    font-family: 'Georgia', serif;
+    line-height: 1.8; /* Improve readability */
+    text-align: justify; /* Better alignment for larger chunks of text */
+}
+
+
+

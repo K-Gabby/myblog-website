@@ -1,0 +1,93 @@
+.search-wrap {
+  background-color: #faf0e6; /* Soft beige */
+  width: fit-content;
+  margin: 2.5rem auto 4rem auto;
+  padding: 0.8rem; /* Increased padding for a spacious look */
+  border-radius: 8px; /* Slightly rounder corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  color: #1e3b34;
+}
+
+.search-wrap form {
+  display: flex;
+  align-items: center;
+}
+
+.search-wrap input {
+  background-color: #faf0e6; /* Matches the search bar background */
+  color: #264653; /* Olive tone for text */
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+}
+
+.search-wrap input::placeholder {
+  color: rgba(169, 169, 169, 0.8);
+}
+
+.search-wrap span {
+  padding-right: 0.5rem;
+  cursor: pointer;
+  color: #264653; /* Olive tone */
+  transition: color 0.3s ease;
+}
+
+.search-wrap span:hover {
+  color: #2a9d8f; /* Slightly brighter olive for hover effect */
+}
+
+.search-wrap button {
+  outline: none;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0 4px 4px 0; /* Rounded corners on the right */
+  background-color: #2a9d8f; /* Olive-green for the button */
+  color: #fff; /* White text for contrast */
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-wrap button:hover {
+  background-color: #21867a; /* Darker olive-green on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-wrap {
+    width: 90%; /* Adapts to smaller screen sizes */
+    margin: 2rem auto;
+  }
+
+  .search-wrap input {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .search-wrap button {
+    font-size: 0.9rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-wrap {
+    width: 100%; /* Full width for small screens */
+    padding: 0.6rem;
+  }
+
+  .search-wrap input {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    margin-right: 5rem;
+  }
+
+  .search-wrap button {
+    font-size: 0.8rem;
+    padding: 0.3rem 1rem;
+  }
+}

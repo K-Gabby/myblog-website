@@ -1,0 +1,94 @@
+.home-header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f4f4eb;
+  border-bottom: 2px solid #ccc;
+  color: #d4c8b2;
+  border-bottom: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.home-header h2 {
+  color: #2a9d8f;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Arial Black", sans-serif;
+}
+
+.home-header h1 {
+  font-size: 2rem;
+  color: #dbba81;
+  margin-bottom: 1.5rem;
+  font-family: "Georgia", serif;
+}
+
+.home-header h1 span {
+  color: #e76f51; /* Keeps the contrast vibrant */
+}
+
+.home-header p {
+  color: #dcd0bb; /* Softer beige for secondary text */
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.header-link {
+  display: inline-block;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #2a9d8f; /* Teal for button background */
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.header-link:hover {
+  background-color: #21867a; /* Darker teal on hover */
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-header h2 {
+    font-size: 2rem;
+  }
+
+  .home-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-header p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .header-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .home-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-header p {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .header-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
