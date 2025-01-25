@@ -76,14 +76,12 @@
 
 @media (max-width: 480px) {
   .search-wrap {
-    width: 100%; /* Full width for small screens */
+    width: 80%; /* Full width for small screens */
     padding: 0.6rem;
   }
-
   .search-wrap input {
     font-size: 0.8rem;
     padding: 0.3rem 0.6rem;
-    margin-right: 5rem;
   }
 
   .search-wrap button {
