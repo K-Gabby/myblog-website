@@ -105,11 +105,11 @@ const Chatbot = () => {
                       : "messages__item--visitor"
                   }`}
                 >
-                  <img
+                  {/* <img
                     className="messages__img"
                     src={msg.name === "User" ? "/assets/images/user.jpg" : "/assets/images/chat.png"}
                     alt={msg.name}
-                  />
+                  /> */}
                   {msg.message}
                 </div>
               ))}

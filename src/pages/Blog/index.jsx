@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { blogList } from "../../config/data";
+import { blogList as defaultBlogs } from "../../config/data";
 import Chip from "../../components/common/Chip";
 import EmptyList from "../../components/common/EmptyList";
 import "./styles.css";
@@ -10,17 +10,24 @@ const Blog = () => {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    let blog = blogList.find((blog) => blog.id === parseInt(id));
+    // Get blogs from localStorage
+    const storedBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
 
-    if (blog) {
-      setBlog(blog);
+    // Merge with defaultBlogs (optional)
+    const allBlogs = [...storedBlogs, ...defaultBlogs];
+
+    // Find the blog by id
+    const foundBlog = allBlogs.find((blog) => blog.id === parseInt(id));
+
+    if (foundBlog) {
+      setBlog(foundBlog);
     }
   }, [id]);
 
   return (
     <div>
       <Link className="blog-goBack" to="/">
-        <span>&#8592;</span> <sapn> Go Back</sapn>
+        <span>&#8592;</span> <span>Go Back</span>
       </Link>
 
       {blog ? (

@@ -1,0 +1,138 @@
+/* Upload Section */
+.upload-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 2px 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.upload-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 2px 4px 12px rgba(0, 86, 179, 0.3);
+}
+
+/* Blog Upload Container */
+.blog-upload {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.blog-upload h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Form Styling */
+.blog-upload form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.blog-upload label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+
+.blog-upload input,
+.blog-upload textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.blog-upload input:focus,
+.blog-upload textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Textarea Customization */
+.blog-upload textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* File Upload */
+.blog-upload input[type="file"] {
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Cover Preview */
+.cover-preview {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 12px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit Button */
+.blog-upload button {
+  background: #007bff;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-upload button:hover {
+  background: #0056b3;
+  box-shadow: 0px 4px 10px rgba(0, 86, 179, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-upload {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .upload-btn {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-upload {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .blog-upload h2 {
+    font-size: 22px;
+  }
+
+  .blog-upload button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

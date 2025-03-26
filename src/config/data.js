@@ -20,7 +20,7 @@ export const blogList = [
       "Milan, the fashion capital of Italy, is a city that seamlessly blends tradition and innovation. From the iconic Duomo to the trendy Brera district, Milan is a treasure trove of art, architecture, and culture. In this article, we'll take you on a journey through the city's most iconic landmarks, hidden gems, and off-the-beaten-path destinations. Whether you're interested in history, art, fashion, or food, Milan has something for everyone. So, come and discover the city's unique charm and character.",
     authorName: "Tim Parks",
     authorAvatar: "/assets/images/author-2.jpg",
-    createdAt: "August 25, 2002",
+    createdAt: "August 25, 2022",
     cover: "/assets/images/milan-1.jpg",
   },
   {
