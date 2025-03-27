@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom";
 import Header from "../../components/Home/Header";
 import SearchBar from "../../components/Home/SearchBar";
 import BlogList from "../../components/Home/BlogList";
@@ -11,23 +11,17 @@ const Home = () => {
   const [searchKey, setSearchKey] = useState("");
 
   useEffect(() => {
-    // Retrieve from localStorage and merge with default blogs
+    // Retrieve blogs from localStorage
     const storedBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
-    const combinedBlogs = [...storedBlogs, ...defaultBlogs];
 
-    // Remove duplicates based on title
-    const uniqueBlogs = Array.from(
-      new Map(combinedBlogs.map((blog) => [blog.title, blog])).values()
-    );
-
-    setBlogs(uniqueBlogs);
-  }, []);
-
-  useEffect(() => {
-    if (blogs.length > 0) {
-      localStorage.setItem("blogs", JSON.stringify(blogs));
+    // If localStorage is empty, initialize it with defaultBlogs
+    if (storedBlogs.length === 0) {
+      localStorage.setItem("blogs", JSON.stringify(defaultBlogs));
+      setBlogs(defaultBlogs);
+    } else {
+      setBlogs(storedBlogs);
     }
-  }, [blogs]);
+  }, []);
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
@@ -35,7 +29,7 @@ const Home = () => {
   };
 
   const handleSearchResults = () => {
-    const allBlogs = JSON.parse(localStorage.getItem("blogs")) || defaultBlogs;
+    const allBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
     const filteredBlogs = allBlogs.filter(
       (blog) =>
         blog.category.toLowerCase().includes(searchKey.toLowerCase().trim()) ||
@@ -47,7 +41,7 @@ const Home = () => {
 
   const handleClearSearch = () => {
     setSearchKey("");
-    setBlogs(JSON.parse(localStorage.getItem("blogs")) || defaultBlogs);
+    setBlogs(JSON.parse(localStorage.getItem("blogs")) || []);
   };
 
   return (
@@ -68,7 +62,7 @@ const Home = () => {
         handleSearchKey={(e) => setSearchKey(e.target.value)}
       />
 
-      {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs} /> }
+      {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs} />}
     </div>
   );
 };
